@@ -1,0 +1,63 @@
+
+
+{% extends "pro_it/form_base.html" %}
+{% load static %}
+
+	{% block title %}Pro It || Connexion:Connnectez vous à votre monde{% endblock %}
+
+	{% block container %}
+
+
+		<section class="page-section login-section" style="padding: 0px">
+			<div class="container d-flex align-items-center flex-column">
+
+			<img class="masthead-avatar mb-5" src="{% static 'img/logoit.png' %}" style="width: 300px; height: 275px;" alt="">
+			</div>
+			<div class="divider-custom space">
+	        	<div class="divider-custom-line"></div>
+	        	<div class="divider-custom-icon">
+	          		<i class="fas fa-star"></i>
+	        	</div>
+	        	<div class="divider-custom-line"></div>
+	      	</div>
+
+			<div class="container">
+			    <div class="row">
+			      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto" style="margin-top: -30px">
+			        <div class="card card-signin my-5">
+			          	<div class="card-body">
+			            	<h5 class="card-title text-center">Connexion</h5>
+			            	<form action="login" method="POST" class="form-signin">
+			            		 {% csrf_token %}
+				              	<div class="form-label-group">
+									{% if utilisateur == "not"%}
+				              		<div class="alert alert-danger alert-dismissible fade show" role="alert" style="text-align: center">
+										<strong>Identifiants Erronés!  Veuillez réessayer</strong>
+									</div>
+									{% endif %}
+				              		<label for="id_email">Adresse Email</label>
+				                	<input type="email" id="inputEmail" class="form-control" name="email" required autofocus>   	
+				              	</div>
+
+				              	<div class="form-label-group">
+				              		<label for="id_password">Mot de passe</label>
+				                	<input type="password" id="inputPassword" name="password" class="form-control" required>
+				              	</div>
+
+				              	<div class="custom-control custom-checkbox mb-3">
+				                	<input type="checkbox" class="custom-control-input" id="customCheck1">
+				                	<label class="custom-control-label" for="customCheck1">Se souvenir de Moi</label>
+				              	</div>
+				              		<button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" style="width: 50%; margin-left: 95px">Connexion</button>
+				              	<hr class="my-4">
+				            </form>
+				          </div>
+				        </div>
+				      </div>
+				    </div>
+				  </div>
+
+			</section>
+
+
+	{% endblock %}

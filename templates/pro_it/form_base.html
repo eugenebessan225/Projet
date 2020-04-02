@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>{% block title %}Pro It || Portail de partage d'expérience des IT dans le domaine professionnel{% endblock %}</title>
+
+   <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'css/freelancer.min.css' %}" rel="stylesheet">
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+ 
+
+</head>
+	<body id="page-top">
+		{% block container %} {% endblock %}
+
+	<footer class="copyright py-4 text-center text-white">
+		{% block footer %}
+	    <div class="container">
+	      <small>Copyright &copy; it</small>
+
+	        <p>+225 79 68 97 82</p>
+
+	    </div>
+	    {% endblock %}
+	</footer>  
+
+ </body>
+</html>

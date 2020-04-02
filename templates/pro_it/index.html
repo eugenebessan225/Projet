@@ -1,0 +1,100 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Pro It || Portail de partage d'expérience des IT dans le domaine professionnel</title>
+
+  
+  <link href="{% static 'css/freelancer.min.css' %}" rel="stylesheet">
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+  <style type="text/css">
+    .bg-orange{
+      background-color: #fd7e14;
+    }
+
+    .bg-blue{
+      background-color: #8faadc;
+    }
+  </style>
+
+</head>
+
+<body id="page-top">
+
+   <header class="masthead bg-primary text-white text-center ">
+    <div class="container d-flex align-items-center flex-column">
+
+      <!-- Masthead Avatar Image -->
+      <img class="masthead-avatar mb-5" src="{% static 'img/logoit.png' %}" style="width: 300px; height: 275px; margin-top: -195px" alt="">
+
+      <!-- Masthead Heading -->
+      <div class="form-group">
+        <a href="register" class="btn btn-xl bg-blue">Inscription</a>
+        <a href="login" class="btn btn-xl bg-orange">Connexion</a>
+      </div>     
+
+      <!-- Icon Divider -->
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+      </div>
+
+      <!-- Masthead Subheading -->
+      <p class="masthead-subheading font-weight-light mb-0">Connectez vous à votre monde, Soyez plus proches de la famille</p>
+
+    </div>
+  </header>
+
+  <section class="page-section bg-withe text-secondary mb-0" id="about">
+    <div class="container">
+
+      <!-- About Section Heading -->
+      <h2 class="page-section-heading text-center text-uppercase text-secondary">Objectifs</h2>
+
+      <!-- Icon Divider -->
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+      </div>
+
+      <!-- About Section Content -->
+      <div class="row">
+        <div class="col-lg-4 ml-auto">
+          <p class="lead">Pro IT est une plateforme de rencontre et de partage d'expérience entre les it stagiaires et les ainés, qui ont déjà passé le cap du stage. </p>
+        </div>
+        <div class="col-lg-4 mr-auto">
+          <p class="lead">C'est l'endroit rêvé pour partager son quotidien professionnel, ses difficultés et ses réalisations en vue de montrer la voix à suivre aux plus jeunes que sont les stagiaires.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+</body>
+
+  <section class="copyright py-4 text-center text-white">
+    <div class="container">
+      <small>Copyright &copy; it</small>
+      <div>
+        <p>+225 79 68 97 82</p>
+      </div>
+    </div>
+  </section>
+
+</html>

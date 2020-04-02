@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bcc04996-3445-4890-a86a-8f1bc18a1724" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ZP7tuif0cNMHPDnnOxpRRuPmSX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pro_it/static/img" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pro_it/static/img" />
+      <recent name="$PROJECT_DIR$/pro_it/static/js" />
+      <recent name="$PROJECT_DIR$/pro_it/static/css" />
+      <recent name="$PROJECT_DIR$/media/avatar" />
+      <recent name="$PROJECT_DIR$/pro_it/static" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bcc04996-3445-4890-a86a-8f1bc18a1724" name="Default Changelist" comment="" />
+      <created>1584729093310</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584729093310</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="172" y="27" width="1012" height="704" key="SettingsEditor" timestamp="1585327654394">
+      <screen x="0" y="27" width="1366" height="704" />
+    </state>
+    <state x="172" y="27" width="1012" height="704" key="SettingsEditor/0.27.1366.704@0.27.1366.704" timestamp="1585327654393" />
+    <state x="339" y="205" key="com.intellij.ide.util.TipDialog" timestamp="1585427129187">
+      <screen x="0" y="27" width="1366" height="704" />
+    </state>
+    <state x="339" y="205" key="com.intellij.ide.util.TipDialog/0.27.1366.704@0.27.1366.704" timestamp="1585427129187" />
+    <state x="23" y="27" width="1343" height="471" key="dock-window-1" timestamp="1585249047648">
+      <screen x="0" y="27" width="1366" height="704" />
+    </state>
+    <state x="23" y="27" width="1343" height="471" key="dock-window-1/0.27.1366.704@0.27.1366.704" timestamp="1585249047648" />
+  </component>
+</project>
