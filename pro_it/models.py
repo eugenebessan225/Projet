@@ -41,10 +41,18 @@ class Aine(Personne):
     person_type = 'aine'
 
 
-class Stagiaire(Personne):
-    person_type = 'stagiaire'
+class Projet(models.Model):
     titre_projet = models.CharField(max_length=100)
     description = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.titre_projet[:19] + "..."
+
+
+class Stagiaire(Personne):
+    person_type = 'stagiaire'
+    projet = models.OneToOneField(
+        Projet, on_delete=models.CASCADE, related_name="stagiaire")
     parrain = models.ManyToManyField(Aine, related_name="filieuls")
 
 
@@ -58,7 +66,7 @@ class Publication(models.Model):
     nbre_comment = models.IntegerField(default=0)
 
     def __str__(self):
-        return self.description
+        return self.description[:19] + "..."
 
 
 class Document(Publication):
@@ -88,6 +96,8 @@ class Commentaire(models.Model):
     def __str__(self):
         return self.auteur
 
+# explication
+
 
 class Groupe(models.Model):
     nom = models.CharField(max_length=100)
@@ -97,13 +107,17 @@ class Groupe(models.Model):
         return self.nom
 
 
-"""
 class Notification(models.Model):
-    pass
-"""
+    receveur = models.ManyToManyField(Personne, related_name='notifications')
+    objet = models.CharField(max_length=50)
+    contenu = models.CharField(max_length=500)
+    date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.objet
 
 
-class conversation(models.Model):
+class Conversation(models.Model):
     envoyeur = models.OneToOneField(Personne)
     receveur = models.OneToOneField(Personne)
     message = models.TextField()
