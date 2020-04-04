@@ -72,14 +72,30 @@ class Stagiaire(Personne):
 	person_type = 'Stagiaire'
 
 
+class Notification(models.Model):
+	proprio = models.ForeignKey(Personne, related_name="Notifications", on_delete=models.CASCADE)
+	objet = models.CharField(max_length=50, null=True, blank=True)
+	contenu = models.CharField(max_length=100, null=True)
 
-class Photo_actualite(models.Model):
-	#auteur = models.ForeignKey(Personne, related_name="publications", on_delete=models.CASCADE)
+
+class Messages(models.Model):
+	auteur = models.ForeignKey(Personne, related_name="messages", on_delete=models.CASCADE)
+	contenu = models.CharField(max_length=1000, null=True)
+	date_publication = models.DateTimeField(null=True, default=datetime.now())
+
+
+
+class Publication(models.Model):
+	auteur = models.ForeignKey(Personne, related_name="publications", on_delete=models.CASCADE)
 	image = models.ImageField(upload_to='actualité', null=True, blank=True)
 	description = models.CharField(max_length=500, null=True)
-	#publication_date = models.DateTimeField(default=datetime.now().time(), blank=True, null=True)
-	nbre_jaime = models.IntegerField(default=0)
+	publication_date = models.DateTimeField(default=datetime.now().time(), blank=True, null=True)
 	nbre_com = models.IntegerField(default=0)
+
+
+class Commentaire(models.Model):
+	auteur = models.ForeignKey(Personne, related_name="commentaires_faits", on_delete=models.CASCADE)
+	publication = models.ForeignKey(Publication, related_name="commentaires_ecrits", on_delete=models.CASCADE)
 
 
 

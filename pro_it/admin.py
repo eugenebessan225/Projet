@@ -2,7 +2,7 @@ from django.contrib import admin
 from pro_it.models import *
 
 admin.site.register(Personne)
-admin.site.register(Photo_actualite)
+admin.site.register(Publication)
 
 
 @admin.register(Stagiaire)

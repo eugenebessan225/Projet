@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bcc04996-3445-4890-a86a-8f1bc18a1724" name="Default Changelist" comment="" />
+    <list default="true" id="bcc04996-3445-4890-a86a-8f1bc18a1724" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro_it/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/pro_it/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro_it/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/pro_it/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro_it/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/pro_it/models.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +20,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1ZP7tuif0cNMHPDnnOxpRRuPmSX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -22,6 +32,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pro_it/static/img" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -52,10 +63,14 @@
       <screen x="0" y="27" width="1366" height="704" />
     </state>
     <state x="172" y="27" width="1012" height="704" key="SettingsEditor/0.27.1366.704@0.27.1366.704" timestamp="1585327654393" />
-    <state x="339" y="205" key="com.intellij.ide.util.TipDialog" timestamp="1585427129187">
+    <state x="339" y="205" key="com.intellij.ide.util.TipDialog" timestamp="1585925479514">
       <screen x="0" y="27" width="1366" height="704" />
     </state>
-    <state x="339" y="205" key="com.intellij.ide.util.TipDialog/0.27.1366.704@0.27.1366.704" timestamp="1585427129187" />
+    <state x="339" y="205" key="com.intellij.ide.util.TipDialog/0.27.1366.704@0.27.1366.704" timestamp="1585925479514" />
+    <state x="451" y="298" width="454" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585951305987">
+      <screen x="0" y="27" width="1366" height="704" />
+    </state>
+    <state x="451" y="298" width="454" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1366.704@0.27.1366.704" timestamp="1585951305987" />
     <state x="23" y="27" width="1343" height="471" key="dock-window-1" timestamp="1585249047648">
       <screen x="0" y="27" width="1366" height="704" />
     </state>

@@ -203,7 +203,7 @@ class AineProfilForm(forms.ModelForm):
 
 class ActuForm(forms.ModelForm):
     class Meta:
-        model = Photo_actualite
+        model = Publication
         exclude = ('nbre_jaime', 'nbre_com',)
 
 
