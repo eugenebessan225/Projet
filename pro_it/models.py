@@ -116,15 +116,3 @@ class Notification(models.Model):
     def __str__(self):
         return self.objet
 
-
-class Message(models.Model):
-    auteur = models.ForeignKey(
-        Personne, related_name="messages", on_delete=models.CASCADE)
-    contenu = models.CharField(max_length=500)
-    date = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return self.auteur.user.username
-
-    def las_10_messages(self):
-        return Message.objects.order_by('-date').all()[:10]
