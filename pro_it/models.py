@@ -34,7 +34,7 @@ class Personne(models.Model):
     amis = models.ManyToManyField('self')
 
     def __str__(self):
-        return self.user.last_name + " " self.user.first_name
+        return self.user.last_name + " " + self.user.first_name
 
 
 class Aine(Personne):
@@ -117,11 +117,14 @@ class Notification(models.Model):
         return self.objet
 
 
-class Conversation(models.Model):
-    envoyeur = models.OneToOneField(Personne)
-    receveur = models.OneToOneField(Personne)
-    message = models.TextField()
+class Message(models.Model):
+    auteur = models.ForeignKey(
+        Personne, related_name="messages", on_delete=models.CASCADE)
+    contenu = models.CharField(max_length=500)
     date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.envoyeur + "->" + self.receveur
+        return self.auteur.user.username
+
+    def las_10_messages(self):
+        return Message.objects.order_by('-date').all()[:10]

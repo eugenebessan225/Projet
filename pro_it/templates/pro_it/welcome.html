@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+
+{% block title %}Welcome
+{% endblock title %}
+
+{% block section %}
+
+{% if user.is_authenticated %}
+
+<h1>Welcome {{user.username}}</h1>
+<p class="h3"><a href="{% url 'pro_it:logout' %}">Déconnexion</a></p>
+{% endif %}
+
+
+{% endblock section %}
