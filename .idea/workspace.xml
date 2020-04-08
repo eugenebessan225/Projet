@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pro_it/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/pro_it/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro_it/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/pro_it/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pro_it/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/pro_it/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,21 +55,37 @@
       <option name="presentableId" value="Default" />
       <updated>1584729093310</updated>
     </task>
+    <task id="LOCAL-00001" summary="modification faite">
+      <created>1586001867441</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1586001867441</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="modification faite" />
+    <option name="LAST_COMMIT_MESSAGE" value="modification faite" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="289" y="27" width="777" height="704" key="CommitChangelistDialog2" timestamp="1586001867261">
+      <screen x="0" y="27" width="1366" height="704" />
+    </state>
+    <state x="289" y="27" width="777" height="704" key="CommitChangelistDialog2/0.27.1366.704@0.27.1366.704" timestamp="1586001867261" />
     <state x="172" y="27" width="1012" height="704" key="SettingsEditor" timestamp="1585327654394">
       <screen x="0" y="27" width="1366" height="704" />
     </state>
     <state x="172" y="27" width="1012" height="704" key="SettingsEditor/0.27.1366.704@0.27.1366.704" timestamp="1585327654393" />
-    <state x="339" y="205" key="com.intellij.ide.util.TipDialog" timestamp="1585925479514">
+    <state x="339" y="205" key="com.intellij.ide.util.TipDialog" timestamp="1586310398492">
       <screen x="0" y="27" width="1366" height="704" />
     </state>
-    <state x="339" y="205" key="com.intellij.ide.util.TipDialog/0.27.1366.704@0.27.1366.704" timestamp="1585925479514" />
-    <state x="451" y="298" width="454" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585951305987">
+    <state x="339" y="205" key="com.intellij.ide.util.TipDialog/0.27.1366.704@0.27.1366.704" timestamp="1586310398492" />
+    <state x="451" y="298" width="464" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586001879847">
       <screen x="0" y="27" width="1366" height="704" />
     </state>
-    <state x="451" y="298" width="454" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1366.704@0.27.1366.704" timestamp="1585951305987" />
+    <state x="451" y="298" width="464" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1366.704@0.27.1366.704" timestamp="1586001879847" />
     <state x="23" y="27" width="1343" height="471" key="dock-window-1" timestamp="1585249047648">
       <screen x="0" y="27" width="1366" height="704" />
     </state>

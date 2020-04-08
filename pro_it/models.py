@@ -39,6 +39,12 @@ PROMO_CHOICES = [
 	('IT 06', 'IT 06'),
 ]
 
+
+class Groupe(models.Model):
+	nom = models.CharField(max_length=50, null=True)
+	description = models.CharField(max_length=100, null=True)
+
+
 class Personne(models.Model):
 	"""Représente les parties prenantes sur ce site"""
 
@@ -53,6 +59,7 @@ class Personne(models.Model):
 	entreprise = models.CharField(max_length = 100, null = True)
 	mots_cles = models.CharField(max_length = 200, null = True, verbose_name = "Technologies utilisées")
 	password = models.CharField(max_length  = 200, null = True, verbose_name = "Mot de passe")
+	groupe = models.ForeignKey(Groupe, related_name="membres",null=True, on_delete=models.CASCADE)
 	person_type = 'generic'
 
 
@@ -72,6 +79,9 @@ class Stagiaire(Personne):
 	person_type = 'Stagiaire'
 
 
+
+
+
 class Notification(models.Model):
 	proprio = models.ForeignKey(Personne, related_name="Notifications", on_delete=models.CASCADE)
 	objet = models.CharField(max_length=50, null=True, blank=True)
@@ -79,7 +89,8 @@ class Notification(models.Model):
 
 
 class Messages(models.Model):
-	auteur = models.ForeignKey(Personne, related_name="messages", on_delete=models.CASCADE)
+	auteur = models.ForeignKey(Personne, related_name="messages_envoyés", on_delete=models.CASCADE)
+	destinateur = models.ManyToManyField(Personne, related_name="messages_reçus")
 	contenu = models.CharField(max_length=1000, null=True)
 	date_publication = models.DateTimeField(null=True, default=datetime.now())
 

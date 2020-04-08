@@ -3,6 +3,7 @@ from pro_it.models import *
 
 admin.site.register(Personne)
 admin.site.register(Publication)
+admin.site.register(Messages)
 
 
 @admin.register(Stagiaire)
