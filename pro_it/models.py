@@ -19,18 +19,19 @@ class Personne(models.Model):
     genre = models.CharField(max_length=10, choices=liste_choices.GENRE)
     promotion = models.CharField(
         max_length=10, choices=liste_choices.PROMO_CHOICES)
-    date_naissance = models.DateField()
-    numero_telephone = models.CharField(max_length=20)
+    date_naissance = models.DateField('date de naissance')
+    numero_telephone = models.CharField('numéro de téléphone', max_length=20)
     avatar = models.ImageField(
         upload_to='personne/avatar', default='personne/avatar/avatar.jpg')
     couverture = models.ImageField(
         upload_to='personne/couverture', default='personne/couverture/avatar.jpg')
     entreprise = models.CharField(max_length=100)
-    technologie = models.ManyToManyField(Technologie)
+    technologie = models.ManyToManyField(
+        Technologie, verbose_name="technologies utilisées")
     statut = models.CharField(
         max_length=50, choices=liste_choices.STATUT_CHOICES)
     filiere = models.CharField(
-        max_length=50, choices=liste_choices.FILIERE_CHOICES)
+        'filière', max_length=50, choices=liste_choices.FILIERE_CHOICES)
     amis = models.ManyToManyField('self')
 
     def __str__(self):
@@ -42,8 +43,8 @@ class Aine(Personne):
 
 
 class Projet(models.Model):
-    titre_projet = models.CharField(max_length=100)
-    description = models.CharField(max_length=200)
+    titre_projet = models.CharField('thème du ptojet', max_length=100)
+    description = models.CharField('description du projet', max_length=200)
 
     def __str__(self):
         return self.titre_projet[:19] + "..."
@@ -53,7 +54,8 @@ class Stagiaire(Personne):
     person_type = 'stagiaire'
     projet = models.OneToOneField(
         Projet, on_delete=models.CASCADE, related_name="stagiaire")
-    parrain = models.ManyToManyField(Aine, related_name="filieuls")
+    parrain = models.ManyToManyField(
+        Aine, related_name="filieuls", default=None, blank=True)
 
 
 class Publication(models.Model):
@@ -115,4 +117,3 @@ class Notification(models.Model):
 
     def __str__(self):
         return self.objet
-
