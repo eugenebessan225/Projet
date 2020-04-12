@@ -22,4 +22,12 @@ $(function () {
       });
     }
   }
+
+  // Material Select Initialization
+  $('.multiple-select').materialSelect();
+
+  $('#id_aine-username').removeAttr('autofocus');
+  $('#id_aine-username').next().removeClass('active');
+  $('#id_st-username').removeAttr('autofocus');
+  $('#id_st-username').next().removeClass('active');
 });

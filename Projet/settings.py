@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'pro_it',
     'widget_tweaks',
+    'bootstrapform',
 ]
 
 MIDDLEWARE = [
@@ -127,9 +128,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
-
-LOGOUT_REDIRECT_URL = 'pro_it:connexion'
+LOGIN_URL = 'connexion'
+LOGIN_REDIRECT_URL = 'pro_it:acceuil'
+LOGOUT_REDIRECT_URL = 'connexion'
 MESSAGE_TAGS = {
     message_constants.ERROR: 'danger',
     message_constants.SUCCESS: 'success'
 }
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

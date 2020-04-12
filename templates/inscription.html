@@ -2,7 +2,7 @@
 {% load widget_tweaks %}
 {% block section %}
 <!-- Default form subscription -->
-<div class="border border-light p-5 mb-5 mx-auto" style="width:40%; margin-top:80px">
+<div class="border border-light p-5 mb-5 mx-auto col-md-8 col-lg-6">
   <p class="h4 mb-5 text-center">Inscription</p>
 
   <form method="POST">
@@ -27,14 +27,14 @@
   <div class="form-row">
     <div class="col-md">
       <div class="md-form md-outline">
-        {% render_field userForm.last_name class="form-control" %}
-          <label for="{{userForm.last_name.name}}">{{userForm.last_name.label}}</label>
+        {% render_field user_stagiaire_Form.last_name class="form-control" %}
+          <label for="{{user_stagiaire_Form.last_name.name}}">{{user_stagiaire_Form.last_name.label}}</label>
       </div>
     </div>
     <div class="col-md">
       <div class="md-form md-outline">
-        {% render_field userForm.first_name class="form-control" %}
-        <label for="{{userForm.first_name.name}}">{{userForm.first_name.label}}</label>
+        {% render_field user_stagiaire_Form.first_name class="form-control" %}
+        <label for="{{user_stagiaire_Form.first_name.name}}">{{user_stagiaire_Form.first_name.label}}</label>
       </div>
     </div>
   </div>
@@ -42,8 +42,8 @@
   <div class="form-row">
     <div class="col-md">
       <div class="md-form md-outline">
-        {% render_field userForm.username class="form-control" %}
-        <label for="{{userForm.username.name}}">{{userForm.username.label}}</label>
+        {% render_field user_stagiaire_Form.username class="form-control" %}
+        <label for="{{user_stagiaire_Form.username.name}}">{{user_stagiaire_Form.username.label}}</label>
       </div>
     </div>
     <div class="col-md">
@@ -71,8 +71,8 @@
   <div class="form-row">
     <div class="col-md">
         <div class="md-form md-outline">
-          {% render_field userForm.email class="form-control" type="email"%}
-            <label for="{{userForm.email.name}}">{{userForm.email.label}}</label>
+          {% render_field user_stagiaire_Form.email class="form-control" type="email"%}
+            <label for="{{user_stagiaire_Form.email.name}}">{{user_stagiaire_Form.email.label}}</label>
         </div>
     </div>
   </div>
@@ -84,11 +84,10 @@
       </div>
     </div>
     <div class="col-md">
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <label class="input-group-text" for="{{stagiaireForm.technologie.name}}">{{stagiaireForm.technologie.label}}</label>
-        </div>
-        {% render_field stagiaireForm.technologie class="form-control" %}
+      <div class="select-outline">
+        {% render_field stagiaireForm.technologie class='multiple-select md-form md-outline colorful-select dropdown-primary' multiple="multiple" searchable="Rechercher".. %}
+        <label for="{{stagiaireForm.technologie.name}}">{{stagiaireForm.technologie.label}}</label>
+        <button class="btn-save btn btn-primary btn-sm">Enregistrer</button>
       </div>
     </div>
   </div>
@@ -116,16 +115,16 @@
   <div class="form-row">
     <div class="col-md">
       <div class="md-form md-outline">
-        {% render_field userForm.password1 class="form-control" %}
-        <label for="{{userForm.password1.name}}">{{userForm.password1.label}}</label>
+        {% render_field user_stagiaire_Form.password1 class="form-control" %}
+        <label for="{{user_stagiaire_Form.password1.name}}">{{user_stagiaire_Form.password1.label}}</label>
       </div>
     </div>
   </div>
   <div class="form-row">
     <div class="col-md">
       <div class="md-form md-outline">
-        {% render_field userForm.password2 class="form-control" %}
-        <label for="{{userForm.password2.name}}">{{userForm.password2.label}}</label>
+        {% render_field user_stagiaire_Form.password2 class="form-control" %}
+        <label for="{{user_stagiaire_Form.password2.name}}">{{user_stagiaire_Form.password2.label}}</label>
       </div>
     </div>
   </div>
@@ -148,7 +147,7 @@
   
   <!-- Sign in button -->
   <button class="btn primary-color-dark text-white" type="submit">Créer un compte</button>
-  <a href=" {% url 'pro_it:connexion' %} ">Se connecter</a>
+  <a href=" {% url 'connexion' %} ">Se connecter</a>
 
   </form>
 
@@ -160,14 +159,14 @@
   <div class="form-row">
     <div class="col-md">
       <div class="md-form md-outline">
-        {% render_field userForm.last_name class="form-control" %}
-          <label for="{{userForm.last_name.name}}">{{userForm.last_name.label}}</label>
+        {% render_field user_aine_Form.last_name class="form-control" %}
+          <label for="{{user_aine_Form.last_name.name}}">{{user_aine_Form.last_name.label}}</label>
       </div>
     </div>
     <div class="col-md">
       <div class="md-form md-outline">
-        {% render_field userForm.first_name class="form-control" %}
-        <label for="{{userForm.first_name.name}}">{{userForm.first_name.label}}</label>
+        {% render_field user_aine_Form.first_name class="form-control" %}
+        <label for="{{user_aine_Form.first_name.name}}">{{user_aine_Form.first_name.label}}</label>
       </div>
     </div>
   </div>
@@ -175,8 +174,8 @@
   <div class="form-row">
     <div class="col-md">
       <div class="md-form md-outline">
-        {% render_field userForm.username class="form-control" %}
-        <label for="{{userForm.username.name}}">{{userForm.username.label}}</label>
+        {% render_field user_aine_Form.username class="form-control" %}
+        <label for="{{user_aine_Form.username.name}}">{{user_aine_Form.username.label}}</label>
       </div>
     </div>
     <div class="col-md">
@@ -204,8 +203,8 @@
   <div class="form-row">
     <div class="col-md">
         <div class="md-form md-outline">
-          {% render_field userForm.email class="form-control" type="email"%}
-            <label for="{{userForm.email.name}}">{{userForm.email.label}}</label>
+          {% render_field user_aine_Form.email class="form-control" type="email"%}
+            <label for="{{user_aine_Form.email.name}}">{{user_aine_Form.email.label}}</label>
         </div>
     </div>
   </div>
@@ -217,11 +216,10 @@
       </div>
     </div>
     <div class="col-md">
-      <div class="input-group">
-        <div class="input-group-prepend">
-          <label class="input-group-text" for="{{aineForm.technologie.name}}">{{aineForm.technologie.label}}</label>
-        </div>
-        {% render_field aineForm.technologie class="form-control" %}
+      <div class="select-outline">
+        {% render_field aineForm.technologie class='multiple-select md-form md-outline colorful-select dropdown-primary' multiple="multiple" searchable="Rechercher".. %}
+        <label for="{{aineForm.technologie.name}}">{{aineForm.technologie.label}}</label>
+        <button class="btn-save btn btn-primary btn-sm">Enregistrer</button>
       </div>
     </div>
   </div>
@@ -249,27 +247,30 @@
   <div class="form-row">
     <div class="col-md">
       <div class="md-form md-outline">
-        {% render_field userForm.password1 class="form-control" %}
-        <label for="{{userForm.password1.name}}">{{userForm.password1.label}}</label>
+        {% render_field user_aine_Form.password1 class="form-control" %}
+        <label for="{{user_aine_Form.password1.name}}">{{user_aine_Form.password1.label}}</label>
       </div>
     </div>
   </div>
   <div class="form-row">
     <div class="col-md">
       <div class="md-form md-outline">
-        {% render_field userForm.password2 class="form-control" %}
-        <label for="{{userForm.password2.name}}">{{userForm.password2.label}}</label>
+        {% render_field user_aine_Form.password2 class="form-control" %}
+        <label for="{{user_aine_Form.password2.name}}">{{user_aine_Form.password2.label}}</label>
       </div>
     </div>
   </div>
   
   <!-- Sign in button -->
   <button class="btn primary-color-dark text-white" type="submit">Créer un compte</button>
-  <a href=" {% url 'pro_it:connexion' %} ">Se connecter</a>
+  <a href=" {% url 'connexion' %} ">Se connecter</a>
 
   </form>
 </div>
 <!-- Default form subscription -->
+
+
+
 {% endblock section %}
 
 
