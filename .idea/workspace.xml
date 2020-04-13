@@ -2,10 +2,182 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bcc04996-3445-4890-a86a-8f1bc18a1724" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/pro_it/liste_choices.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro_it/templates/pro_it/acceuil.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/addons-pro/cards-extended.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/addons-pro/chat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/addons-pro/multi-range.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/addons-pro/simple-charts.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/addons-pro/steppers.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/addons-pro/timeline.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/addons/datatables-select.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/addons/datatables.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/addons/directives.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/addons/flag.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/addons/jquery.zmd.hierarchical-display.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/addons/rating.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/mdb.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/mdb.lite.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/mdb.lite.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/mdb.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/modules/accordion-extended.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/modules/animations-extended.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/modules/lightbox.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/modules/megamenu.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/modules/parallax.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Bold.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Bold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Bold.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Light.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Light.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Light.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Light.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Medium.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Medium.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Medium.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Medium.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Thin.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Thin.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Thin.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Thin.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/addons-pro/cards-extended.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/addons-pro/chat.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/addons-pro/multi-range.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/addons-pro/simple-charts.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/addons-pro/steppers.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/addons-pro/timeline.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/addons/datatables-select.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/addons/datatables.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/addons/directives.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/addons/flag.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/addons/imagesloaded.pkgd.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/addons/jquery.zmd.hierarchical-display.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/addons/masonry.pkgd.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/addons/rating.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/mdb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/mdb.lite.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/mdb.lite.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/mdb.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/modules/accordion-extended.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/modules/animations-extended.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/modules/buttons.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/modules/cards.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/modules/character-counter.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/modules/chips.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/modules/collapsible.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/modules/dropdown/dropdown-searchable.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/modules/dropdown/dropdown.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/modules/file-input.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/modules/forms-free.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/modules/lightbox.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/modules/material-select/material-select-view-renderer.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/modules/material-select/material-select-view.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/modules/material-select/material-select.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/modules/mdb-autocomplete.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/modules/megamenu.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/modules/parallax.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/modules/preloading.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/modules/range-input.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/modules/scrolling-navbar.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/modules/sidenav.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/modules/smooth-scroll.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/modules/sticky.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/modules/treeview.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/modules/wow.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/popper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/popper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/compte/password_change_done.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/compte/password_change_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/compte/password_reset.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/compte/password_reset_complete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/compte/password_reset_confirm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/compte/password_reset_done.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/connexion.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/inscription.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projet/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projet/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projet/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projet/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/actualité/Capture_décran_de_2019-11-09_13-28-42.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/actualité/Capture_décran_de_2019-11-09_13-28-42_vLKHVmU.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/actualité/Capture_décran_de_2019-11-26_21-51-45.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/actualité/Capture_décran_de_2019-11-26_21-51-45_4NU9mqi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/actualité/Capture_décran_de_2019-11-26_21-51-45_4nfC7kL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/actualité/Capture_décran_de_2019-11-26_21-51-45_95j5HhI.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/actualité/Capture_décran_de_2019-11-26_21-51-45_AA8BRIe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/actualité/Capture_décran_de_2019-11-26_21-51-45_Cx08JPg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/actualité/Capture_décran_de_2019-11-26_21-51-45_DzByQ6u.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/actualité/Capture_décran_de_2019-11-26_21-51-45_HshFVHX.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/actualité/Capture_décran_de_2019-11-26_21-51-45_ICjQVKM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/actualité/Capture_décran_de_2019-11-26_21-51-45_Oozhkbw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/actualité/Capture_décran_de_2019-11-26_21-51-45_TXhGluN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/actualité/Capture_décran_de_2019-11-26_21-51-45_Upub3Y8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/actualité/Capture_décran_de_2019-11-26_21-51-45_Z6Wsv7o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/actualité/Capture_décran_de_2019-11-26_21-51-45_b4sh5Dr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/actualité/Capture_décran_de_2019-11-26_21-51-45_bSlbupm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/actualité/Capture_décran_de_2019-11-26_21-51-45_eHY1SbP.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/actualité/Capture_décran_de_2019-11-26_21-51-45_eTLVB8a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/actualité/Capture_décran_de_2019-11-26_21-51-45_ivxAzgX.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/actualité/Capture_décran_de_2019-11-26_21-51-45_lzGZV0f.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/actualité/Capture_décran_de_2019-11-26_21-51-45_mv55UaS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/actualité/Capture_décran_de_2019-11-26_21-51-45_pneV9VK.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/actualité/Capture_décran_de_2019-12-28_11-28-33.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/actualité/Capture_décran_de_2019-12-28_11-28-33_AZGm0km.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/actualité/Capture_décran_de_2019-12-28_11-28-33_B0R608V.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/actualité/Capture_décran_de_2019-12-28_11-28-33_CekGnjy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/actualité/Capture_décran_de_2019-12-28_11-28-33_Ku7eFmj.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/actualité/Capture_décran_de_2019-12-28_11-28-33_TMgjaJF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/actualité/Capture_décran_de_2019-12-28_11-28-33_XbzjBrQ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/actualité/Capture_décran_de_2019-12-28_11-28-33_f6ePgCI.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/actualité/Capture_décran_de_2019-12-28_11-28-33_g4TvFCW.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/actualité/Capture_décran_de_2019-12-28_11-28-33_jiI49S9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/actualité/Capture_décran_de_2019-12-28_11-28-33_l6w6MTa.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/actualité/Capture_décran_de_2019-12-28_11-28-33_neqkrUp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/actualité/Capture_décran_de_2020-03-26_20-19-33.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/avatar/avatar.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pro_it/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/pro_it/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro_it/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/pro_it/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro_it/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/pro_it/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro_it/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/pro_it/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro_it/migrations/0002_auto_20200320_2050.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro_it/migrations/0003_auto_20200320_2121.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro_it/migrations/0004_auto_20200327_1412.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro_it/migrations/0005_auto_20200327_1658.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro_it/migrations/0006_auto_20200328_0103.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro_it/migrations/0007_remove_personne_genre.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro_it/migrations/0008_personne_genre.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro_it/migrations/0009_auto_20200328_2242.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pro_it/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/pro_it/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro_it/static/css/all.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro_it/static/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro_it/static/css/freelancer.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro_it/static/css/freelancer.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro_it/static/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro_it/static/img/logoit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro_it/static/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro_it/static/js/jquery-3.2.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro_it/static/js/jquery-3.3.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro_it/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/pro_it/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro_it/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pro_it/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pro_it/acceuil.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pro_it/enre_js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pro_it/form_base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pro_it/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pro_it/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pro_it/publier.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pro_it/register.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +198,6 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">

@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+{% block title %}connexion
+{% endblock title %}
+
+
+{% block nav %}
+{% endblock nav %}
+
+{% block section %}
+  
+<div class="row justify-content-center mx-auto w-100" style="position:absolute; top:10%"> 
+
+    
+
+  <div class="card col-md-5 col-lg-4 col-sm-7 col-10">
+  <form class="text-center px-5 pt-5 pb-4" method="POST">
+    {% csrf_token %}
+  <p class="h4 mb-5">Connexion</p>
+  {% if form.errors %}
+    <div class="mt-5 wow fadeIn">
+      <div
+        class="alert alert-danger alert-dismissible fade show text-center"
+        role="alert"
+      >
+      <strong>Nom d'utilisateur ou mot de passe incorrect.</strong>
+      <button
+        type="button"
+        class="close"
+        data-dismiss="alert"
+        aria-label="Close"
+      >
+      <span aria-hidden="true">&times;</span>
+      </button>
+      </div> 
+  </div>
+  {% endif %}
+
+
+    <div class="content">
+        <div class="md-form md-outline">
+            {% render_field form.username class="form-control" %}
+            <label for="{{form.username.name}}">{{form.username.label}}</label>
+            <div class="in-error">{{form.username.errors}}</div>
+        </div>
+        <!-- Password -->
+        <div class="md-form md-outline">
+            {% render_field form.password class="form-control" %}
+            <label for="{{form.password.name}}">{{form.password.label}}</label>
+            <div class="in-error">{{form.password.errors}}</div>
+        </div>
+    </div>
+  
+
+  <div class="d-flex justify-content-around">
+      
+      <div class="ml-auto">
+          <a href="{% url 'password_reset' %}">Mot de passe oublié?</a>
+      </div>
+  </div>
+
+  <!-- Sign in button -->
+  <button class="btn btn-info my-4" type="submit">Connexion</button>
+
+  <!-- Register -->
+  <p>Pas de compte?
+      <a href="{% url 'pro_it:inscription' %}"> S'inscrire</a>
+  </p>
+
+  <!-- Social login -->
+  <p>ou se connecter avec:</p>
+
+  <a href="" class="mx-2" role="button" title="facebook"><i class="fab fa-facebook-square" style="color: #3b5998; font-size: 1.5em;"></i></a>
+  <a href="" class="mx-2" role="button" title="google"><i class="fab fa-google-plus-square" style="color: #DB4437; font-size: 1.5em;"></i></a>
+
+</form>
+</div>
+<!-- Default form login -->
+</div>
+{% endblock section %}

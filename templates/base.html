@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Pro IT|{% block title %}{% endblock title %}</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}">
+  <!-- Your custom styles (optional) -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    {% block nav %}
+    
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #deb34a;">
+        <div class="container py-2">
+            <span class="navbar-brand" style="font-size: 30px;">Pro It</span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333" aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+            <div class="collapse navbar-collapse ml-5" id="navbarSupportedContent-333">
+                <ul class="navbar-nav ml-auto nav-flex-icons" style="font-size: 17px;">
+
+                    {% if user.is_authenticated %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-user"></i>
+                            <span>{% if user.last_name %}{{user.last_name.capitalize}}{% else %}{{user.username}}{% endif %}</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-sm-left dropdown-menu-lg-right dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+                            <a class="dropdown-item" href="#">Tableau de bord</a> {% if ass.provider %} {% else %}
+                            <a class="dropdown-item" href="{% url 'password_change' %}">Changer mot de passe</a> {% endif %}
+
+                            <a class="dropdown-item" href="{% url 'pro_it:deconnexion' %}">Déconnexion</a>
+                        </div>
+                    </li>
+
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link px-5 btn btn-danger" href="{% url 'pro_it:inscription' %}">S'incrire</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    {% endblock nav %}
+
+    {% block section %}
+
+    {% endblock section %}
+    </div>
+  <!-- End your project here-->
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>
+  <!-- Your custom scripts (optional) -->
+  <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
+
+</body>
+</html>

@@ -1,119 +1,58 @@
 from django.shortcuts import render, redirect
-from pro_it.forms import *
+from django.contrib import auth
 from django.contrib import messages
-
-
-
-def index(request):
-    return render(request, 'pro_it/index.html')
-
-
-def register(request):
-
-    if len(request.POST) > 0 and 'profileType' in request.POST:
-        AineForm = AineProfilForm(request.POST, prefix="a")
-        StagiaireForm = StagiaireProfilForm(request.POST, prefix="s")
-        if request.POST['profileType'] == 'aine':
-            print("je sui un aine")
-            AineForm = AineProfilForm(request.POST, prefix="a")
-            print("form aine ", AineForm)
-            if AineForm.is_valid():
-                AineForm.save()
-                return redirect('./acceuil')
-            else:
-                nonvalide = True
-                return render(request, 'pro_it/register.html', locals())
-
-        elif request.POST['profileType'] == 'stagiaire':
-            StagiaireForm = StagiaireProfilForm(request.POST, prefix="s")
-            print("formulaire", StagiaireForm.errors)
-            if StagiaireForm.is_valid():
-                StagiaireForm.save()
-                return redirect('./acceuil')
-
-            else:
-                nonvalide = True
-                return render(request, 'pro_it/register.html', locals())
-    else:
-        AineForm = AineProfilForm(prefix="a")
-        StagiaireForm = StagiaireProfilForm(prefix="s")
-
-        return render(request, 'pro_it/register.html', locals())
-
-
-
-
-def login(request):
-
-    if len(request.POST) > 0:
-        form = LoginForm(request.POST)
-        if form.is_valid():
-            utilisateur_email = form.cleaned_data['email']
-            utilisateur = Personne.objects.get(email=utilisateur_email)
-            request.session['utilisateur_id'] = utilisateur.id
-
-            return redirect('./acceuil')
-
-        else:
-            utilisateur = "not"
-            return render(request, 'pro_it/login.html', locals())
-    else:
-        form = LoginForm()
-        return render(request, 'pro_it/login.html', locals())
-
-
-
-
-def get_utilisateur(request):
-    if 'utilisateur_id' in request.session:
-        utilisateur_id = request.session['utilisateur_id']
-        if len(Stagiaire.objects.filter(id=utilisateur_id)) == 1:
-            return Stagiaire.objects.get(id=utilisateur_id)
-        elif len(Aine.objects.filter(id=utilisateur_id)) == 1:
-            return Aine.objects.get(id=utilisateur_id)
-        else:
-            return None
-    else:
-        return None
-
-
-
-def publication():
-    publications = Photo_actualite.objects.all()
-    return publications
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
+from django.contrib.auth import update_session_auth_hash
+from .forms import StagiaireProfilForm, AineProfilForm, ProjetForm, UserRegistrationForm
+from .models import Stagiaire, Aine, Projet
 
 
 def acceuil(request):
-    utilisateur = get_utilisateur(request)
-    if utilisateur:
-        publications = publication()
-        return render(request, 'pro_it/acceuil.html', locals())
+    return render(request, 'pro_it/acceuil.html')
+
+
+@login_required
+def welcome(request):
+    return render(request, 'pro_it/welcome.html')
+
+
+def inscription(request):
+    if request.POST and 'profileType' in request.POST:
+        user_stagiaire_Form = UserRegistrationForm(prefix='st')
+        user_aine_Form = UserRegistrationForm(prefix='aine')
+        stagiaireForm = StagiaireProfilForm(prefix="st")
+        projetForm = ProjetForm(prefix="st")
+        aineForm = AineProfilForm(prefix="ai")
+        if request.POST['profileType'] == 'stagiaire':
+            stagiaireForm = StagiaireProfilForm(
+                request.POST, request.FILES, prefix="st")
+            user_stagiaire_Form = UserRegistrationForm(
+                request.POST, prefix="st")
+            projetForm = ProjetForm(request.POST, prefix="st")
+            if stagiaireForm.is_valid() and user_stagiaire_Form.is_valid() and projetForm.is_valid():
+                user = user_stagiaire_Form.save()
+                projet = projetForm.save()
+                nouveau_stagiaire = stagiaireForm.save(commit=False)
+                nouveau_stagiaire.projet = projet
+                nouveau_stagiaire.user = user
+                nouveau_stagiaire.save()
+                return redirect('connexion')
+        elif request.POST['profileType'] == 'aine':
+            aineForm = AineProfilForm(
+                request.POST, request.FILES, prefix="ai")
+            user_aine_Form = UserRegistrationForm(request.POST, prefix="aine")
+            if aineForm.is_valid() and user_aine_Form.is_valid():
+                user = user_aine_Form.save()
+                aine = aineForm.save(commit=False)
+                aine.user = user
+                aine.save()
+                return redirect('connexion')
+        return render(request, 'inscription.html', {'stagiaireForm': stagiaireForm, 'aineForm': aineForm, 'user_stagiaire_Form': user_stagiaire_Form, 'user_aine_Form': user_aine_Form, 'projetForm': projetForm})
     else:
-        return redirect('./login')
-
-
-def publier(request):
-    utilisateur = get_utilisateur(request)
-
-    if utilisateur:
-        if len(request.POST) > 0:
-            form = ActuForm(request.POST, request.FILES)
-            if form.is_valid():
-                form.save()
-                publications = publication()
-                return render(request, 'pro_it/acceuil.html', locals())
-            else:
-                return render(request, 'pro_it/publier.html', {'form': form})
-        else:
-            form = ActuForm()
-            return render(request, 'pro_it/publier.html', {'form': form})
-    else:
-        return redirect('./login')
-
-
-
-
-
-
-
-
+        user_stagiaire_Form = UserRegistrationForm(prefix='st')
+        user_aine_Form = UserRegistrationForm(prefix='aine')
+        stagiaireForm = StagiaireProfilForm(prefix="st")
+        projetForm = ProjetForm(prefix="st")
+        aineForm = AineProfilForm(prefix="ai")
+        return render(request, 'inscription.html', {'stagiaireForm': stagiaireForm, 'aineForm': aineForm, 'user_stagiaire_Form': user_stagiaire_Form, 'user_aine_Form': user_aine_Form, 'projetForm': projetForm})

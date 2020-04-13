@@ -1,10 +1,10 @@
 from django.urls import path
 from . import views
+from django.contrib.auth import views as auth_views
+app_name = "pro_it"
 
 urlpatterns = [
-    path('', views.index, name = 'index'),
-    path('login', views.login, name = 'login'),
-    path('register', views.register, name='register'),
-    path('acceuil', views.acceuil, name='acceuil'),
-    path('publier', views.publier, name='publier'),
+    path('deconnexion', auth_views.LogoutView.as_view(), name='deconnexion'),
+    path('inscription', views.inscription, name='inscription'),
+    path('acceuil/', views.acceuil, name="acceuil"),
 ]

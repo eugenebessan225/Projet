@@ -1,0 +1,279 @@
+{% extends 'base.html' %} {% block title %}inscription{% endblock title %}
+{% load widget_tweaks %}
+{% block section %}
+<!-- Default form subscription -->
+<div class="border border-light p-5 mb-5 mx-auto col-md-8 col-lg-6">
+  <p class="h4 mb-5 text-center">Inscription</p>
+
+  <form method="POST">
+  {% csrf_token %}
+      
+    <div class="row">
+        <div class="col-md-6 select-outline">
+          <select class="mdb-select md-form md-outline colorful-select dropdown-primary" id='profileType'>
+            <option value="stagiaire" {% if stagiaireForm.is_bound %} selected {% endif %} >Stagiaire</option>
+            <option value="aine" {% if aineForm.is_bound %} selected {% endif %}>Aîne</option>
+          </select>
+          <label>Vous êtes</label>
+
+        </div>
+    </div>
+  </form>
+
+  <form method="POST" id='stagiaireForm' enctype="multipart/form-data">
+  {% csrf_token %}
+  <input type="text" name="profileType" value="stagiaire" hidden>
+  
+  <div class="form-row">
+    <div class="col-md">
+      <div class="md-form md-outline">
+        {% render_field user_stagiaire_Form.last_name class="form-control" %}
+          <label for="{{user_stagiaire_Form.last_name.name}}">{{user_stagiaire_Form.last_name.label}}</label>
+      </div>
+    </div>
+    <div class="col-md">
+      <div class="md-form md-outline">
+        {% render_field user_stagiaire_Form.first_name class="form-control" %}
+        <label for="{{user_stagiaire_Form.first_name.name}}">{{user_stagiaire_Form.first_name.label}}</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="col-md">
+      <div class="md-form md-outline">
+        {% render_field user_stagiaire_Form.username class="form-control" %}
+        <label for="{{user_stagiaire_Form.username.name}}">{{user_stagiaire_Form.username.label}}</label>
+      </div>
+    </div>
+    <div class="col-md">
+      <div class="select-outline">
+        {% render_field stagiaireForm.genre class="mdb-select md-form md-outline colorful-select dropdown-primary" %}
+        <label for="{{stagiaireForm.genre.name}}">{{stagiaireForm.genre.label}}</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="col-md">
+      <div class="md-form md-outline">
+        {% render_field stagiaireForm.date_naissance class="form-control" type="date" %}
+        <label for="{{stagiaireForm.date_naissance.name}}">{{stagiaireForm.date_naissance.label}}</label>
+      </div>
+    </div>
+    <div class="col-md">
+      <div class="md-form md-outline">
+        {% render_field stagiaireForm.numero_telephone class="form-control" type="tel" %}
+          <label for="{{stagiaireForm.numero_telephone.name}}">{{stagiaireForm.numero_telephone.label}}</label>
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md">
+        <div class="md-form md-outline">
+          {% render_field user_stagiaire_Form.email class="form-control" type="email"%}
+            <label for="{{user_stagiaire_Form.email.name}}">{{user_stagiaire_Form.email.label}}</label>
+        </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md">
+      <div class="md-form md-outline">
+        {% render_field stagiaireForm.entreprise class="form-control" %}
+          <label for="{{stagiaireForm.entreprise.name}}">{{stagiaireForm.entreprise.label}}</label>
+      </div>
+    </div>
+    <div class="col-md">
+      <div class="select-outline">
+        {% render_field stagiaireForm.technologie class='multiple-select md-form md-outline colorful-select dropdown-primary' multiple="multiple" searchable="Rechercher".. %}
+        <label for="{{stagiaireForm.technologie.name}}">{{stagiaireForm.technologie.label}}</label>
+        <button class="btn-save btn btn-primary btn-sm">Enregistrer</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="col-md">
+      <div class="select-outline">
+        {% render_field stagiaireForm.statut class="mdb-select md-form md-outline colorful-select dropdown-primary" %}
+        <label for="{{stagiaireForm.statut.name}}">{{stagiaireForm.statut.label}}</label>
+      </div>
+    </div>
+    <div class="col-md">
+      <div class="select-outline">
+        {% render_field stagiaireForm.filiere class="mdb-select md-form md-outline colorful-select dropdown-primary" %}
+        <label for="{{stagiaireForm.filiere.name}}">{{stagiaireForm.filiere.label}}</label>
+      </div>
+    </div>
+    <div class="col-md">
+      <div class="select-outline">
+        {% render_field stagiaireForm.promotion class="mdb-select md-form md-outline colorful-select dropdown-primary" %}
+        <label for="{{stagiaireForm.promotion.name}}">{{stagiaireForm.promotion.label}}</label>
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md">
+      <div class="md-form md-outline">
+        {% render_field user_stagiaire_Form.password1 class="form-control" %}
+        <label for="{{user_stagiaire_Form.password1.name}}">{{user_stagiaire_Form.password1.label}}</label>
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md">
+      <div class="md-form md-outline">
+        {% render_field user_stagiaire_Form.password2 class="form-control" %}
+        <label for="{{user_stagiaire_Form.password2.name}}">{{user_stagiaire_Form.password2.label}}</label>
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md">
+      <div class="md-form md-outline">
+        {% render_field projetForm.titre_projet class="form-control" %}
+        <label for="{{projetForm.titre_projet.name}}">{{projetForm.titre_projet.label}}</label>
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md">
+      <div class="md-form md-outline">
+        {% render_field projetForm.description class="form-control" %}
+        <label for="{{projetForm.description.name}}">{{projetForm.description.label}}</label>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Sign in button -->
+  <button class="btn primary-color-dark text-white" type="submit">Créer un compte</button>
+  <a href=" {% url 'connexion' %} ">Se connecter</a>
+
+  </form>
+
+
+  <form method="POST" id='aineForm' enctype="multipart/form-data">
+  {% csrf_token %}
+  <input type="text" name="profileType" value="aine" hidden>
+  
+  <div class="form-row">
+    <div class="col-md">
+      <div class="md-form md-outline">
+        {% render_field user_aine_Form.last_name class="form-control" %}
+          <label for="{{user_aine_Form.last_name.name}}">{{user_aine_Form.last_name.label}}</label>
+      </div>
+    </div>
+    <div class="col-md">
+      <div class="md-form md-outline">
+        {% render_field user_aine_Form.first_name class="form-control" %}
+        <label for="{{user_aine_Form.first_name.name}}">{{user_aine_Form.first_name.label}}</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="col-md">
+      <div class="md-form md-outline">
+        {% render_field user_aine_Form.username class="form-control" %}
+        <label for="{{user_aine_Form.username.name}}">{{user_aine_Form.username.label}}</label>
+      </div>
+    </div>
+    <div class="col-md">
+      <div class="select-outline">
+        {% render_field aineForm.genre class="mdb-select md-form md-outline colorful-select dropdown-primary" %}
+        <label for="{{aineForm.genre.name}}">{{aineForm.genre.label}}</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="col-md">
+      <div class="md-form md-outline">
+        {% render_field aineForm.date_naissance class="form-control" type="date" %}
+        <label for="{{aineForm.date_naissance.name}}">{{aineForm.date_naissance.label}}</label>
+      </div>
+    </div>
+    <div class="col-md">
+      <div class="md-form md-outline">
+        {% render_field aineForm.numero_telephone class="form-control" type="tel" %}
+          <label for="{{aineForm.numero_telephone.name}}">{{aineForm.numero_telephone.label}}</label>
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md">
+        <div class="md-form md-outline">
+          {% render_field user_aine_Form.email class="form-control" type="email"%}
+            <label for="{{user_aine_Form.email.name}}">{{user_aine_Form.email.label}}</label>
+        </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md">
+      <div class="md-form md-outline">
+        {% render_field aineForm.entreprise class="form-control" %}
+          <label for="{{aineForm.entreprise.name}}">{{aineForm.entreprise.label}}</label>
+      </div>
+    </div>
+    <div class="col-md">
+      <div class="select-outline">
+        {% render_field aineForm.technologie class='multiple-select md-form md-outline colorful-select dropdown-primary' multiple="multiple" searchable="Rechercher".. %}
+        <label for="{{aineForm.technologie.name}}">{{aineForm.technologie.label}}</label>
+        <button class="btn-save btn btn-primary btn-sm">Enregistrer</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="col-md">
+      <div class="select-outline">
+        {% render_field aineForm.statut class="mdb-select md-form md-outline colorful-select dropdown-primary" %}
+        <label for="{{aineForm.statut.name}}">{{aineForm.statut.label}}</label>
+      </div>
+    </div>
+    <div class="col-md">
+      <div class="select-outline">
+        {% render_field aineForm.filiere class="mdb-select md-form md-outline colorful-select dropdown-primary" %}
+        <label for="{{aineForm.filiere.name}}">{{aineForm.filiere.label}}</label>
+      </div>
+    </div>
+    <div class="col-md">
+      <div class="select-outline">
+        {% render_field aineForm.promotion class="mdb-select md-form md-outline colorful-select dropdown-primary" %}
+        <label for="{{aineForm.promotion.name}}">{{aineForm.promotion.label}}</label>
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md">
+      <div class="md-form md-outline">
+        {% render_field user_aine_Form.password1 class="form-control" %}
+        <label for="{{user_aine_Form.password1.name}}">{{user_aine_Form.password1.label}}</label>
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md">
+      <div class="md-form md-outline">
+        {% render_field user_aine_Form.password2 class="form-control" %}
+        <label for="{{user_aine_Form.password2.name}}">{{user_aine_Form.password2.label}}</label>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Sign in button -->
+  <button class="btn primary-color-dark text-white" type="submit">Créer un compte</button>
+  <a href=" {% url 'connexion' %} ">Se connecter</a>
+
+  </form>
+</div>
+<!-- Default form subscription -->
+
+
+
+{% endblock section %}
+
+
+
+
+
