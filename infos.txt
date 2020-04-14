@@ -1,0 +1,18 @@
+*****Relatif au données d'inscription et données modifiables*****
+
+Donées d'inscription : 
+Nom, Prenoms, email, filiere, entreprise, genre, promo, mot de passe 
+
+
+
+
+toutes autres données seront mises à jour apres les inscriptions
+
+
+
+*********Les donnnées modifiables ********
+
+
+couverture, avatar, mot clé, mot de passe, entreprise (voir date de naissance)
+
+
